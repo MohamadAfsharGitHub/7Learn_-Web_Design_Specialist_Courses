@@ -1,0 +1,19 @@
+ @font-face {
+          font-family: sahel;
+          src: local("sahel"), local("sahel-light"),
+           url("./Assest/fonts/Sahel-Light.eot") format("eot"),
+           url("./Assest/fonts/Sahel-Light.woff") format("woff"),
+           url("./Assest/fonts/Sahel-Light.woff2") format("woff2");
+        }
+        body{
+
+            font-family: sahel;
+        }
+
+     
+
+    
+
+
+
+   
