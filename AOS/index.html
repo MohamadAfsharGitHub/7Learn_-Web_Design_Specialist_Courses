@@ -1,0 +1,308 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کارت محصولات</title>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* =========================
+           Reset
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           Container
+        ========================== */
+
+        .container {
+            width: min(1200px, 92%);
+            margin: 100px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+
+        /* =========================
+           Card
+        ========================== */
+
+        .card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 100%;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* =========================
+           Image
+        ========================== */
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =========================
+           Card Content
+        ========================== */
+
+        .card-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .link {
+            color: #333;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 8px;
+
+            transition: color 0.2s ease;
+        }
+
+        .link:hover {
+            color: #198754;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.9;
+
+            padding-bottom: 15px;
+            margin-bottom: 16px;
+
+            border-bottom: 1px solid #eee;
+        }
+
+
+        /* =========================
+           Button
+        ========================== */
+
+        .btn {
+            margin-top: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 42px;
+
+            background: #198754;
+            color: #fff;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #146c43;
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================
+           Tablet
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           Mobile
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr;
+                gap: 18px;
+                margin: 50px auto;
+            }
+
+            .card-content {
+                padding: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- Card 1 -->
+        <article
+            class="card"
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="800">
+
+            <img
+                class="card-image"
+                src="./Assets/img/72b419ef20ed20a24a1ef59c521bf43a51397c8c_1777128441.webp"
+                alt="کالای ۱">
+
+            <div class="card-content">
+
+                <a class="link" href="#">
+                    اسلاید ۱
+                </a>
+
+                <p class="description">
+                    کالای ۱
+                </p>
+
+                <a class="btn" href="#">
+                    ادامه مطلب
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- Card 2 -->
+        <article
+            class="card"
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-duration="800">
+
+            <img
+                class="card-image"
+                src="./Assets/img/a38ead587f140e6d9465da7e0e963827b3b6774f_1617713141.webp"
+                alt="کالای ۲">
+
+            <div class="card-content">
+
+                <a class="link" href="#">
+                    اسلاید ۲
+                </a>
+
+                <p class="description">
+                    کالای ۲
+                </p>
+
+                <a class="btn" href="#">
+                    ادامه مطلب
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- Card 3 -->
+        <article
+            class="card"
+            data-aos="fade-down"
+            data-aos-delay="250"
+            data-aos-duration="800">
+
+            <img
+                class="card-image"
+                src="./Assets/img/4f5a2f7f80c54c7a29ed87a70501ea3d38140ca7_1761994878.webp"
+                alt="کالای ۳">
+
+            <div class="card-content">
+
+                <a class="link" href="#">
+                    اسلاید ۳
+                </a>
+
+                <p class="description">
+                    کالای ۳
+                </p>
+
+                <a class="btn" href="#">
+                    ادامه مطلب
+                </a>
+
+            </div>
+        </article>
+
+    </main>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 80
+        });
+    </script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,433 @@
+``html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Slick Carousel</title>
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <style>
+        /* =========================
+           General
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* =========================
+           Main Container
+        ========================== */
+
+        .carousel-container {
+            width: min(1200px, 100%);
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        /* =========================
+           First Slider
+           Centered Fade Slider
+        ========================== */
+
+        .my-slick-single-slider-Fade {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .my-slick-single-slider-Fade .item {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .my-slick-single-slider-Fade img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Second Slider
+        ========================== */
+
+        .my-slick-slider {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .my-slick-slider .item {
+            padding: 8px;
+        }
+
+        .my-slick-slider .item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .my-slick-slider .item:hover img {
+            transform: scale(1.02);
+        }
+
+        /* =========================
+           Slick Arrows
+        ========================== */
+
+        .slick-prev,
+        .slick-next {
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+        }
+
+        .slick-prev {
+            right: -5px;
+            left: auto;
+        }
+
+        .slick-next {
+            left: -5px;
+            right: auto;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-size: 35px;
+            opacity: 0.8;
+        }
+
+        /* =========================
+           Slick Dots
+        ========================== */
+
+        .slick-dots {
+            bottom: -28px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 9px;
+        }
+
+        /* =========================
+           Tablet
+        ========================== */
+
+        @media (max-width: 1024px) {
+
+            .carousel-container {
+                padding: 15px 10px;
+            }
+
+            .my-slick-single-slider-Fade {
+                max-width: 750px;
+            }
+
+            .my-slick-single-slider-Fade img {
+                max-height: 420px;
+            }
+
+            .my-slick-slider .item img {
+                height: 200px;
+            }
+        }
+
+        /* =========================
+           Mobile
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .carousel-container {
+                padding: 10px 5px;
+            }
+
+            .my-slick-single-slider-Fade {
+                margin-bottom: 25px;
+            }
+
+            .my-slick-single-slider-Fade .item {
+                padding: 0 5px;
+            }
+
+            .my-slick-single-slider-Fade img {
+                max-height: 300px;
+                border-radius: 8px;
+            }
+
+            .my-slick-slider {
+                padding: 0 5px;
+            }
+
+            .my-slick-slider .item {
+                padding: 5px;
+            }
+
+            .my-slick-slider .item img {
+                height: 160px;
+                border-radius: 8px;
+            }
+
+            .slick-prev {
+                right: 0;
+            }
+
+            .slick-next {
+                left: 0;
+            }
+        }
+
+        /* =========================
+           Small Mobile
+        ========================== */
+
+        @media (max-width: 480px) {
+
+            .my-slick-single-slider-Fade img {
+                max-height: 240px;
+            }
+
+            .my-slick-slider .item img {
+                height: 150px;
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="carousel-container">
+
+    <!-- =========================
+         First Slider
+    ========================== -->
+
+    <div class="my-slick-single-slider-Fade">
+
+        <div class="item">
+            <img src="./Assets/img/34a28cdec9e82eed86547d2695067d13615289d8_1624175632.webp"
+                 alt="تصویر اسلاید ۱">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/72b419ef20ed20a24a1ef59c521bf43a51397c8c_1777128441.webp"
+                 alt="تصویر اسلاید ۲">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/7e0d47e2c1f9ba16e57bc16a725ec1ba0a52a259_1787918319.webp"
+                 alt="تصویر اسلاید ۳">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/a38ead587f140e6d9465da7e0e963827b3b6774f_1617713141.webp"
+                 alt="تصویر اسلاید ۴">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/bef2ec95b09558b582abacea5fc4593a29b26edc_1739019057.webp"
+                 alt="تصویر اسلاید ۵">
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         Second Slider
+    ========================== -->
+
+    <div class="my-slick-slider">
+
+        <div class="item">
+            <img src="./Assets/img/1ace7686582756e9880aa16bed9bad28832a020c_1787589023.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/1c32d2ec1da7a5e7625289d29c50196079da139c_1785670969.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/3124b6522f2b4b4763fde95d9a6a391c67f9fbe1_1761134727.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/34a28cdec9e82eed86547d2695067d13615289d8_1624175632.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/72b419ef20ed20a24a1ef59c521bf43a51397c8c_1777128441.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/7e0d47e2c1f9ba16e57bc16a725ec1ba0a52a259_1787918319.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/a38ead587f140e6d9465da7e0e963827b3b6774f_1617713141.webp"
+                 alt="تصویر">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/bef2ec95b09558b582abacea5fc4593a29b26edc_1739019057.webp"
+                 alt="تصویر">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        /* =========================
+           First Slider
+        ========================== */
+
+        $('.my-slick-single-slider-Fade').slick({
+            rtl: true,
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 600,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: true,
+            adaptiveHeight: true
+        });
+
+
+        /* =========================
+           Second Slider
+        ========================== */
+
+        $('.my-slick-slider').slick({
+            rtl: true,
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 400,
+
+            slidesToShow: 4,
+            slidesToScroll: 1,
+
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: true,
+
+            responsive: [
+
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
+```
+
+این نسخه چند تغییر مهم نسبت به کد اولیه دارد. **وسط‌چین شدن اسلایدر اول** با `margin: 0 auto` و همچنین `display:flex` روی `.item` انجام شده، بنابراین تصویر حتی اگر نسبت ابعاد متفاوتی داشته باشد در مرکز قرار می‌گیرد.
+
+همچنین این موارد را حذف کردم:
+
+```html
+owl.carousel.css
+owl.theme.default.min.css
+owl.carousel.min.js
+```
+
+چون در کدی که فرستادی از Owl Carousel استفاده نشده است.
+
+همچنین این دو لینک تکراری Slick را هم حذف کردم:
+
+```html
+//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css
+https://cdn.jsdelivr.net/gh/kenwheeler/slick@master/slick/slick.css
+```
+
+و فقط نسخه رسمی CDN را نگه داشتم.
+
+یک نکته دیگر: در کد قبلی `slidesToScroll` در دسکتاپ `4` بود. من آن را به `1` تغییر دادم تا حرکت اسلایدر نرم‌تر باشد و هر بار فقط یک کارت جابه‌جا شود.
+
+اگر منظورت از **«سهمیثق اول وسط‌چین بشه»** چیز دیگری بوده (مثلاً **خود تصویر اول، اسلاید اول، یا دکمه‌های Dots**) بگو دقیقاً کدام قسمت را می‌خواهی وسط‌چین کنم تا همان بخش را تنظیم کنم.

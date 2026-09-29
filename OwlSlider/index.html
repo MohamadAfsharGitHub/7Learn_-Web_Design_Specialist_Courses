@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Owl Carousel</title>
+
+    <link rel="stylesheet" href="./Assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./Assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./Assets/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./Assets/js/owl.carousel.min.js"></script>
+</head>
+
+<body>
+
+    <div class="owl-carousel owl-theme">
+
+        <div class="item">
+            <img src="./Assets/img/1ace7686582756e9880aa16bed9bad28832a020c_1787589023.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/1c32d2ec1da7a5e7625289d29c50196079da139c_1785670969.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/3124b6522f2b4b4763fde95d9a6a391c67f9fbe1_1761134727.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/34a28cdec9e82eed86547d2695067d13615289d8_1624175632.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/72b419ef20ed20a24a1ef59c521bf43a51397c8c_1777128441.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/7e0d47e2c1f9ba16e57bc16a725ec1ba0a52a259_1787918319.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/a38ead587f140e6d9465da7e0e963827b3b6774f_1617713141.webp" alt="">
+        </div>
+
+        <div class="item">
+            <img src="./Assets/img/bef2ec95b09558b582abacea5fc4593a29b26edc_1739019057.webp" alt="">
+        </div>
+
+    </div>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            autoplay:true,
+          rtl: true,
+            loop: true,
+            margin: 10,
+            nav: true,
+            mousedrag:false,
+            responsive: {
+                0: {
+                    items:1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
