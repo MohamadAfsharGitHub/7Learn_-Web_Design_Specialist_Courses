@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه شماره- 1</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./Assets/css/main.css" />
+
+    <style>
+      .course-title {
+        font-weight: bold;
+        font-size: 34px;
+        color: #000;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #d8e0e5;
+        font-size: 24px;
+        min-height: 100%;
+      }
+
+      .circle-loader {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-left-color: #1e90ff;
+        margin: 200px 100px;
+        border-radius: 50%;
+        animation: loader-spin 1.2s infinite linear;
+      }
+
+      @keyframes loader-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .checkmark {
+        display: none;
+      }
+
+      .checkmark::after {
+        content: "";
+        opacity: 1;
+        height: 120px;
+        width: 50px;
+        transform-origin: left top;
+        border-right: 3px solid #5ce85c;
+        border-top: 3px solid #5ce85c;
+        position: absolute;
+        transform: rotate(223deg) scaleX(-1);
+        top: 119px;
+        left: 76px;
+        animation: checkmark 800ms ease forwards;
+      }
+
+      @keyframes checkmark {
+        0% {
+          opacity: 1;
+          height: 0;
+          width: 0;
+        }
+
+        20% {
+          opacity: 1;
+          height: 0;
+          width: 50px;
+        }
+
+        40% {
+          opacity: 1;
+          height: 120px;
+          width: 50px;
+        }
+
+        100% {
+          opacity: 1;
+          height: 120px;
+          width: 50px;
+        }
+      }
+
+      .load-complete {
+        animation: none;
+        border: 1px solid #5ce85c;
+        transition: border-color 500ms ease-out;
+      }
+
+      .btn {
+        padding: 10px 48px;
+        border-radius: 5px;
+        border: 0;
+        font-family: sahel;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #2ed573;
+        color: #fff;
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="course-title">پروژه شماره2</p>
+
+    <div class="circle-loader">
+      <div class="checkmark draw"></div>
+    </div>
+
+    <p><button class="btn">کلیک کنید</button></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          $(".circle-loader").toggleClass("load-complete");
+          $(".checkmark").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

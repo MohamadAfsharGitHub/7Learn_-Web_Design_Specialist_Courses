@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه شماره- 1</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./Assets/css/main.css" />
+
+    <style>
+      .course-title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 34px;
+        color: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f46a6a;
+        color: #fff;
+        max-width: 800px;
+        margin: 100px auto 0;
+        text-align: center;
+        overflow: hiden;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .wrapper {
+        position: relative;
+        margin: 0 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      .counter {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 40px;
+        background-color: #fff;
+        width: 200px;
+        border-radius: 3px;
+        height: 200px;
+        position: relative;
+        color: rgb(80, 80, 80);
+      }
+      .wrapper i {
+        position: absolute;
+        color: #8291ff;
+        z-index: 1;
+        font-size: 54px;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="course-title">پروژه شماره3</p>
+    <div class="container">
+      <div class="wrapper">
+        <i class="fas fa-users"></i>
+        <div class="counter" data-count="150">0</div>
+      </div>
+      <div class="wrapper">
+        <i class="fas fa-newspaper"></i>
+        <div class="counter" data-count="85">0</div>
+      </div>
+      <div class="wrapper">
+        <i class="fas fa-clock"></i>
+        <div class="counter" data-count="2200">0</div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".counter").each(function () {
+          var $this = $(this);
+          var countto = $this.attr("data-count");
+          //  console.log(countto);
+          $({ countNum: $this.text() }).animate(
+            {
+              countNum: countto,
+            },
+            {
+              duration: 1800,
+              easing: "linear",
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+              },
+            },
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
