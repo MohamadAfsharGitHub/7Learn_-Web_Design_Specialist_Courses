@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه شماره ۴</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #d8e0e5;
+        font-family: Tahoma, Arial, sans-serif;
+        padding: 40px 15px;
+      }
+
+      .course-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 34px;
+        color: #000;
+        margin-bottom: 40px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 150px;
+      }
+
+      .toast {
+        text-align: right;
+        padding: 20px 0;
+        background-color: #fff;
+        border-radius: 4px;
+        min-width: 500px;
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+        box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.2);
+      }
+
+      .toast::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        border-radius: 0 4px 4px 0;
+        background-color: green;
+      }
+
+      .toast-icon {
+        position: absolute;
+        top: 45%;
+        right: 22px;
+        width: 14px;
+        height: 14px;
+        padding: 7px;
+        display: inline-block;
+        background-color: green;
+        border-radius: 50%;
+      }
+
+      .toast-type {
+        color: #3e3e3e;
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+
+      .toast-message {
+        color: #878787;
+        font-size: 14px;
+      }
+
+      .toast-content {
+        padding: 0 70px;
+      }
+
+      .toast-close {
+        position: absolute;
+        left: 22px;
+        top: 45%;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        fill: #878787;
+      }
+      .toast-green .toast-icon {
+        background-color: #2bde3f;
+      }
+      .toast-green::before {
+        background-color: #2bde3f;
+      }
+      .toast-blue .toast-icon {
+        background-color: #1d72f3;
+      }
+      .toast-blue::before {
+        background-color: #1d72f3;
+      }
+
+      .toast-yellow .toast-icon {
+        background-color: #ffc007;
+      }
+      .toast-yellow::before {
+        background-color: #ffc007;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="course-title">پروژه شماره ۸</p>
+
+    <div class="container">
+      <div class="toast toast-green">
+        <div class="toast-icon"></div>
+        <div class="toast-content">
+          <p class="toast-type">عملیات موفق</p>
+          <p class="toast-message">پیام شما با موفقیت ثبت شد.</p>
+        </div>
+
+        <div class="toast-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15.642 15.642"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M9.465 7.821l5.884-5.884-1.644-1.644-5.884 5.884L1.937.293.293 1.937l5.884 5.884-5.884 5.884 1.644 1.644 5.884-5.884 5.884 5.884 1.644-1.644z"
+              fill="#000"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="toast toast-blue">
+        <div class="toast-icon"></div>
+        <div class="toast-content">
+          <p class="toast-type">اطلاع‌رسانی</p>
+          <p class="toast-message">
+            به‌زودی نام کاربری و کلمه عبور برای شما ارسال خواهد شد.
+          </p>
+        </div>
+
+        <div class="toast-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15.642 15.642"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M9.465 7.821l5.884-5.884-1.644-1.644-5.884 5.884L1.937.293.293 1.937l5.884 5.884-5.884 5.884 1.644 1.644 5.884-5.884 5.884 5.884 1.644-1.644z"
+              fill="#000"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="toast toast-yellow">
+        <div class="toast-icon"></div>
+        <div class="toast-content">
+          <p class="toast-type">هشدار</p>
+          <p class="toast-message">
+            برای فعال‌سازی حساب کاربری خود اقدام نمایید.
+          </p>
+        </div>
+
+        <div class="toast-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15.642 15.642"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M9.465 7.821l5.884-5.884-1.644-1.644-5.884 5.884L1.937.293.293 1.937l5.884 5.884-5.884 5.884 1.644 1.644 5.884-5.884 5.884 5.884 1.644-1.644z"
+              fill="#000"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".toast-close").click(function () {
+          var parent = $(this).parent(".toast");
+          parent.fadeOut("slow", function () {
+            $(this).remove;
+          });
+        });
+        $(".toast-green").delay(5000).fadeOut();
+      });
+    </script>
+  </body>
+</html>

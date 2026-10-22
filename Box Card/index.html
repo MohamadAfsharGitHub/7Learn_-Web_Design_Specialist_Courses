@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه شماره ۴</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #d8e0e5;
+        font-family: Tahoma, Arial, sans-serif;
+        padding: 40px 15px;
+      }
+
+      .course-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 34px;
+        color: #000;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 376px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        border-radius: 4px;
+      }
+
+      .card:hover {
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
+      }
+
+      .card-thumb {
+        height: 235px;
+        overflow: hidden;
+        background-color: #000;
+        border-radius: 4px 4px 0 0;
+      }
+
+      .card-thumb a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card-thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .card:hover .card-thumb img {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+
+      .card-date {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1;
+        min-width: 65px;
+        padding: 5px;
+        background-color: #08c;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .card-date-day {
+        display: block;
+        font-size: 17px;
+      }
+
+      .card-date-month {
+        display: block;
+        font-size: 13px;
+      }
+
+      .card-body {
+        position: relative;
+        padding: 20px 20px 25px;
+        min-height: 280px;
+        transition: min-height 0.3s ease;
+      }
+
+      .card-category {
+        display: inline-block;
+        position: relative;
+        margin-top: -35px;
+        margin-bottom: 15px;
+        padding: 7px 15px;
+        background-color: #08c;
+      }
+
+      .card-category a {
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .card-title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 1.8;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .card-subtitle {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #08c;
+        line-height: 1.8;
+      }
+
+      .card-description {
+        color: #666c74;
+        font-size: 15px;
+        line-height: 2;
+        opacity: 0;
+        transform: translateY(15px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .card:hover .card-body {
+        min-height: 330px;
+      }
+
+      .card:hover .card-description {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .icon .material-icons {
+        font-size: 17px;
+        color: #08c;
+      }
+
+      .card-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 20px 20px;
+        color: #a3a9ab;
+        font-size: 13px;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .card-footer .material-icons {
+        font-size: 21px;
+        vertical-align: middle;
+        margin-left: 3px;
+      }
+
+      /* نمایش مناسب در موبایل */
+      @media (max-width: 600px) {
+        body {
+          padding: 30px 15px;
+        }
+
+        .course-title {
+          font-size: 27px;
+          margin-bottom: 30px;
+        }
+
+        .card {
+          max-width: 350px;
+        }
+
+        .card-body,
+        .card:hover .card-body {
+          min-height: auto;
+        }
+
+        .card-description {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .card-thumb {
+          height: 210px;
+        }
+
+        .card-title {
+          font-size: 20px;
+        }
+
+        .card-footer {
+          gap: 10px;
+        }
+      }
+
+      /* کاهش انیمیشن در صورت درخواست سیستم‌عامل */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="course-title">پروژه شماره ۴</h1>
+
+    <article class="card">
+      <div class="card-thumb">
+        <a href="#">
+          <img src="./Assets/img/library.jpg" alt="تصویر کتابخانه" />
+        </a>
+      </div>
+
+      <div class="card-date">
+        <span class="card-date-day">12</span>
+        <span class="card-date-month">اردیبهشت</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-category">
+          <a href="#">طراحی وب</a>
+        </div>
+
+        <h2 class="card-title">انیمیشن‌ها در CSS</h2>
+
+        <h3 class="card-subtitle">قسمت اول: معرفی پراپرتی‌ها</h3>
+
+        <p class="card-description">
+          در این جلسه و چند جلسه آینده قصد داریم به‌طور کامل درباره مبحث بسیار
+          کاربردی و جذاب انیمیشن‌ها در CSS صحبت کنیم و با ویژگی‌های مختلف آن
+          آشنا شویم.
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <span class="icon icon-time">
+          <i class="material-icons">alarm</i>
+          ۳۰ دقیقه
+        </span>
+
+        <span class="icon icon-comment">
+          <i class="material-icons">comment</i>
+          ۲ دیدگاه
+        </span>
+      </div>
+    </article>
+  </body>
+</html>
